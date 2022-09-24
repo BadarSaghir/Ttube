@@ -1,8 +1,12 @@
 import React, { useState } from 'react'
 import {ImCancelCircle} from 'react-icons/im'
 import {AiFillHome, AiOutlineMenu} from 'react-icons/ai'
+import {} from 'react-icons'
 import Link from 'next/link';
 import GoogleLogin from 'react-google-login';
+import Discover from '../Discover/Discover';
+import SuggestedAccount from '../SuggestedAccount/SuggestedAccount';
+import Footer from '../Footer/Footer';
 
 const Sidebar = () => {
 const [showSidebar, setShowSidebar] = useState(true);
@@ -38,7 +42,7 @@ const userProfile=true
             onSuccess={(e)=>{e.code}}
             render={(renderProp)=>{
               return <button
-              className='bg-white text-[#f51997] text-lg border-[1px] border-[#f51997] p-2 rounded hover:text-[#fff] hover:bg-[#f51997] '
+              className='bg-white text-[#f51997] text-lg border-[1px] cursor-pointer  border-[#f51997] p-2 rounded-md px-6 py-3 w-full outline-none mt-3 hover:text-[#fff] hover:bg-[#f51997] '
                onClick={renderProp.onClick}
                disabled={renderProp.disabled}
               >Log in</button>
@@ -46,10 +50,13 @@ const userProfile=true
             }}
             onFailure={()=>{}}
             cookiePolicy={'single_host_origin'}
-            />
+            />            
           </div>
         </div>
       )}
+      <Discover />
+      <SuggestedAccount />
+      <Footer />
         </div>
         )
 
