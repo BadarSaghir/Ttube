@@ -29,7 +29,7 @@ const userProfile=true
               <p className='text-2xl'>
                 <AiFillHome />
               </p>
-              <span className='text-xl hidden xl:block'></span>
+              <span className='text-xl hidden xl:block'> For You</span>
               </div>
             </Link>
 
